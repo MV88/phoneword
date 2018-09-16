@@ -14,6 +14,7 @@ module.exports = {
     ],
 	output: {
 		path: __dirname,
+        publicPath: '/',
 		filename: "public/build/app.bundle.js"
 	},
 	plugins: [HtmlWebpackPluginConfig],
@@ -34,6 +35,18 @@ module.exports = {
             }
     	]
   	},
+    devServer: {
+        historyApiFallback: true,
+        proxy: {
+            '/words': {
+                target: "http://localhost:5000",
+                secure: false,
+                headers: {
+                    host: "localhost"
+                }
+            }
+        }
+    },
     mode: 'development',
     resolve: {
         extensions: ['.js', '.jsx']

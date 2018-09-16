@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
-import { Route, HashRouter, Switch } from 'react-router-dom';
-import Home from './components/layouts/Home';
-import About from './components/layouts/About';
+import { Route, BrowserRouter } from 'react-router-dom';
+import GridPhone from './components/containers/GridPhone';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 export default class ReactDemo extends Component {
 
 	render(){
 		return (
-			<HashRouter>
-	            <div>
-					<Route exact path="/" component={Home} />
-					<Route exact path="/about" component={About} />
-	            </div>
-	        </HashRouter>
-
+		  	<Provider store={store}>
+			  	<BrowserRouter>
+					<Route exact path="/" component={GridPhone} />
+		        </BrowserRouter>
+  			</Provider>
 		);
 	}
 }
