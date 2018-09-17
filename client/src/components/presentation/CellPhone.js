@@ -7,8 +7,8 @@ class CellPhone extends Component {
     render(){
         const { num, keys, onClick, clear } = this.props;
         return (
-                <div className={"cell item" + num + (clear ? "clear" : "")}>
-                    <Button onClick={() => onClick(num)}>{num}<br/>{keys}</Button>
+                <div className={"cell item" + num + (clear ? "clear" : "")} onClick={() => onClick(num)}>
+                    <Button>{num}<br/>{keys}</Button>
                 </div>
         );
     }

@@ -1,9 +1,9 @@
-import {WORDS_RECEIVED} from '../actions/phone';
+import {WORDS_RECEIVED, ADD_NUMBER, CLEAR} from '../actions/phone';
 const assign = require('es6-object-assign').assign;
 
 const initialState = {
-    words: ["hand", "game"],
-    number: null
+    words: ["hand", "game"], // TODO reset to []
+    number: ""
 };
 
 export default (state = initialState, action) => {
@@ -12,6 +12,15 @@ export default (state = initialState, action) => {
 
         case WORDS_RECEIVED: {
             updated['words'] = action.words;
+            return updated;
+        }
+        case ADD_NUMBER: {
+            updated['number'] = state.number + action.number;
+            return updated;
+        }
+        case CLEAR: {
+            updated['number'] = "";
+            updated['words'] = [];
             return updated;
         }
 

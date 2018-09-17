@@ -13,8 +13,8 @@ class RowPhone extends Component {
         return (
             <Row>
                 {
-                    data.map(d => {
-                        return (<Col xs={4} > {d && <CellPhone {...d} onClick={onClick}/>}</Col>);
+                    data.map((d, i) => {
+                        return (<Col xs={4} key={i}> {d && <CellPhone {...d} onClick={onClick}/>}</Col>);
                     })
                 }
             </Row>
@@ -22,7 +22,7 @@ class RowPhone extends Component {
     }
 }
 
-RowPhone.PropTypes = {
+RowPhone.propTypes = {
     // properties
     data: PropTypes.array,
     //callbacks

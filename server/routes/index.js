@@ -11,7 +11,7 @@ router.get('/words/:combination', function(req, res, next) {
     const combination = req.params.combination;
     res.status(200).json({
     		success: 1,
-    		words: words.filter(w => combination == w.combination)
+    		words: words.filter(w => combination == w.combination).map(w => w.word)
     });
     res.end();
 });

@@ -11,6 +11,14 @@
     width: 150px;
     height: 150px;
 }
+.phoneword-grid .col-xs-4 {
+
+    padding-right: 0;
+    padding-left: 0;
+}
+.results {
+    width: 150px;
+}
 
 .clear {
     background-color: grey;
