@@ -1,21 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const fs = require("fs");
 
+// this is my (limited) database of words in json, it could be stored on mongodb for example
+const words = require("../resources/words.json");
+
+/**
+ * based on the number the user has provided, it will return all the words matching that combination
+*/
 router.get('/words/:combination', function(req, res, next) {
-    // Fetch data from DB, actually will fetch from external file
-    // just because this is a demo
-    res.writeHead(200, {'Content-Type': 'application/json'});
-    fs.readFile('../resources/dictionary.json', null, function(error, data) {
-        if (error) {
-            res.writeHead(404);
-            res.write('File not found!');
-        } else {
-            res.send({data});
-        }
-        res.end();
+    const combination = req.params.combination;
+    res.status(200).json({
+    		success: 1,
+    		words: words.filter(w => combination == w.combination)
     });
-
+    res.end();
 });
 
 module.exports = router;

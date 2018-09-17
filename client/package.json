@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/MV88/phoneword#readme",
   "dependencies": {
-    "es6-object-assign": "^1.1.0",
+    "es6-object-assign": "1.1.0",
     "html-webpack-plugin": "3.2.0",
     "prop-types": "15.6.2",
     "react": "16.4.2",
-    "react-bootstrap": "^0.32.4",
+    "react-bootstrap": "0.32.4",
     "react-dom": "16.4.2",
     "react-redux": "5.0.7",
     "react-router-dom": "4.3.1",
