@@ -2,7 +2,7 @@ import {WORDS_RECEIVED, ADD_NUMBER, CLEAR} from '../actions/phone';
 const assign = require('es6-object-assign').assign;
 
 const initialState = {
-    words: ["hand", "game"], // TODO reset to []
+    words: [],
     number: ""
 };
 

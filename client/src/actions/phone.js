@@ -54,7 +54,7 @@ module.exports = {
             return dispatch(addNumber(number));
         }
     },
-    CLEAR,
-    ADD_NUMBER,
-    WORDS_RECEIVED
+    CLEAR, clear,
+    ADD_NUMBER, addNumber,
+    WORDS_RECEIVED, wordsReceived
 }
