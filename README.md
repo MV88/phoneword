@@ -27,11 +27,14 @@ In order to start the application run:
 
 browse to `http://localhost:8080`
 
+## How to play
+The list of words is limited but you can try to enter this sequence : 4263 which will return "hand" and "game"
+
 ## Further improvements
-- adding a loading spinner
-- integrate RxJs for better managing async operation
-- adding more unit tests
-- adding a database support with mongogb
+- add a loading spinner
+- integrate RxJs in order to handle async operation in a better and flexible way
+- add more unit tests
+- add a database support with mongogb
 - add authentication if needed
-- a better error handling
-- using less or sass for better css management
+- add error handling and feedbacks for missing words
+- add less or sass support
